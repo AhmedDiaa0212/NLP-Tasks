@@ -1,6 +1,10 @@
 import tkinter as tk
 import nltk
 
+"""
+Example:
+NLTK is a leading platform for building Python programs to work with human language data. NLTK is available for Windows, Mac OS X, and Linux. Best of all, NLTK is a free, open source, community-driven project.
+"""
 def perform_operation():
     """Performs the selected tokenization and displays the result."""
     text = text_entry.get("1.0", tk.END).strip()
