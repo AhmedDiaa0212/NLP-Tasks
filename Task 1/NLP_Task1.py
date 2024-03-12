@@ -10,13 +10,13 @@ def perform_operation():
     text = text_entry.get("1.0", tk.END).strip()
     choice = choice_var.get()
 
-    if choice == 1:
+    if choice == "print tokenized words":
         result = nltk.word_tokenize(text)
         print("Choice number 1: ", result)  # Print tokenized words
-    elif choice == 2:
+    elif choice == "print tokenized sentences":
         result = nltk.sent_tokenize(text)
         print("Choice number 2: ", result)  # Print tokenized sentences
-    elif choice == 3:
+    elif choice == "print output using split function.":
         result = text.split()
         print("Choice number 3: ", result)  # Print output using split function
     else:
@@ -41,8 +41,10 @@ text_entry.pack()
 # Choice dropdown
 choice_label = tk.Label(window, text="Choose an option:")
 choice_label.pack()
-choice_var = tk.IntVar()
-choice_dropdown = tk.OptionMenu(window, choice_var, 1, 2, 3)
+choice_var = tk.StringVar()
+choice_dropdown = tk.OptionMenu(window, choice_var, "print tokenized words",
+                                "print tokenized sentences",
+                                "print output using split function.")
 choice_dropdown.pack()
 
 # Button to perform the operation
