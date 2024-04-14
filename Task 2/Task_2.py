@@ -21,5 +21,8 @@ data["clean_comment"] = data["clean_comment"].apply(str)  # Convert 'clean_comme
 data["clean_comment"] = data["clean_comment"].apply(tokenize)  
 data["clean_comment"] = data["clean_comment"].apply(stem)
 
+# Save the modified DataFrame to a new CSV file
+data.to_csv("cleaned_reddit_data.csv", index=False)  # Save to 'cleaned_reddit_data.csv' without index column
+
 # Print the modified DataFrame
 print(data)
